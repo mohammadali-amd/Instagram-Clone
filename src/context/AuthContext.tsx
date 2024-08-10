@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext, createContext } from "react"
+import React, { useState, useEffect, useContext, createContext } from "react"
 import { IContextType, IUser } from "@/types"
 import { getCurrentUser } from "@/lib/appwrite/api";
 import { useNavigate } from "react-router-dom";
@@ -65,7 +65,7 @@ const AuthProvider = ({ children }: { children: React.ReactNode }) => {
       ) navigate('/sign-in')
 
       checkAuthUser();
-   }, [])
+   }, [navigate])
 
    const value = {
       user,
