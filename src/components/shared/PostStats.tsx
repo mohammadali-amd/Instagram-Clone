@@ -26,7 +26,7 @@ const PostStats = ({ post, userId }: PostStatsProps) => {
 
    useEffect(() => {
       setIsSaved(!!savedPostRecord) // !!savedPostRecord => savedPostRecord ? true : false
-   }, [currentUser])
+   }, [currentUser, savedPostRecord])
 
    const handleLikePost = (e: React.MouseEvent) => {
       e.stopPropagation();
